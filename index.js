@@ -21,7 +21,8 @@ app.get("/add", (req, res) => {
 });
 
 app.post("/books", (req, res) => {
-  res.send("books post");
+  books.push(req.body);
+  res.redirect("/books");
 });
 
 app.listen(3000, () => {

@@ -8,7 +8,9 @@
   </head>
   <body>
     <h1>BOOKS LIST</h1>
-    <%= books[0].title %> <%= books[0].author %> <%= books[1].title %> <%=
-    books[1].author %>
+
+    <% books.map((item, index) => {%>
+    <li>book <%=item.title%> by Author <%=item.author%></li>
+    <% }); %>
   </body>
 </html>
